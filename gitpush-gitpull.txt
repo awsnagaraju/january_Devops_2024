@@ -1,0 +1,23 @@
+Let’s compare git push and git pull in Git:
+
+git push:
+Purpose: Used to send your local commits to a remote repository.
+Action:
+You push your local changes (commits) to a remote Git repository.
+The remote repository can be on another server or even on your local machine (in a different folder).
+Use Case:
+When you want to share your changes with others or update a central repository.
+Commonly used to update the master branch on a shared repository.
+git pull:
+Purpose: Used to fetch and merge changes from a remote repository into your local repository.
+Action:
+Pulls commits from a remote repository and merges them into your current branch (HEAD).
+Essentially, it combines git fetch (to retrieve changes) and git merge (to integrate them).
+Use Case:
+When you want to update your local repository with changes made by others.
+Fetches the latest commits from the remote repository and applies them to your working branch.
+In summary:
+
+git push: Sends your local commits to a remote repository.
+git pull: Retrieves and merges changes from a remote repository into your local branch.
+Remember, git push is about sharing your changes, while git pull is about updating your local copy!
