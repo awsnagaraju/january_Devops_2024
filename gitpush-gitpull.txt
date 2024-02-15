@@ -21,3 +21,4 @@ In summary:
 git push: Sends your local commits to a remote repository.
 git pull: Retrieves and merges changes from a remote repository into your local branch.
 Remember, git push is about sharing your changes, while git pull is about updating your local copy!
+from jenkins we are running the job and build
