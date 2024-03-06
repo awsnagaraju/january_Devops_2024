@@ -1,14 +1,21 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
         stage('Build') {
-            steps {
-                sh 'sleep 5'
+            agent {
+                    label 'slave1'  //  using the slave1 machine/agent/node/slave for build stage
+                }
+                steps {
+                
+                    sh '''
+                    #!/bin/bash
+                    cat Mavenfile
+                    '''
             }
         }
-
         stage('Test') {
+            agent any
             steps {
                 sh '''
                     #!/bin/bash
