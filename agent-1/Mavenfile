@@ -9,6 +9,7 @@ pipeline {
                 steps {
                 
                     sh 'pwd'
+                    sh 'sleep 10'
                     
             }
         }
@@ -18,7 +19,7 @@ pipeline {
                 sh '''
                     #!/bin/bash
                     ls -lrt
-                    sleep 5
+                    sleep 15
                  '''   
 
             }
