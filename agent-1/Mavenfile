@@ -10,8 +10,8 @@ pipeline {
                 
                     sh '''
                     #!/bin/bash
-                    cat Mavenfile
-                    '''
+                    cat file
+                   '''
             }
         }
         stage('Test') {
