@@ -8,10 +8,8 @@ pipeline {
                 }
                 steps {
                 
-                    sh '''
-                    #!/bin/bash
-                    cat file
-                   '''
+                    sh 'pwd'
+                    
             }
         }
         stage('Test') {
