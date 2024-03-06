@@ -1,5 +1,7 @@
 pipeline {
-    agent any   //  this pipeline runs any available agent (slaves/executors/build-in Node)
+    agent any
+    //  Using an Agent   
+    //  this pipeline runs any available agent (slaves/executors/build-in Node)
     stages {
         //  this is the build stage
         stage('Build') {
@@ -19,25 +21,34 @@ pipeline {
     }
 }
 pipeline {
-    agent any  //   the pipeline runs any available agent (slaves/master)
+    agent any  
+    //  User Input Step
+    //   the pipeline runs any available agent (slaves/master)
     stages {
         //   this is the Test stage
         stage('Test') {
             steps {
                 echo "Testing"
+                //  to approvethe test before proceeding
                 input(message: 'press OK to continue', submitter: 'user1,user2')   
             }
         }
     }
 }
 pipeline {
-    agent any 
+    agent any
+    //  Using Parameters
+    //  The parameters directive lets you define parameters for your pipeline.
+    parameters {
+        string(name: 'NAME', description: 'please tell me your name')
+        test(name: 'DESC', description: 'Decribe the job details')
+        booleanParam(name: 'SKIP_TEST', description: 'skip the running the test cases')
+    } 
     stages {
         //  this is the Delivery stage
         stage('Delivery') {
             steps {
-                echo "Delivering"
-
+                echo "Hello, ${params.NAME}!"
             }
         }
     }
