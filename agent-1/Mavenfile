@@ -19,7 +19,7 @@ pipeline {
                 sh '''
                     #!/bin/bash
                     ls -lrt
-                    sleep 15
+                    sleep 10
                  '''   
 
             }
