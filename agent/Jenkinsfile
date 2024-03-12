@@ -22,7 +22,7 @@ pipeline {
         stage('Trigger Maven-pipeline Job') {
             steps {
                  
-                 sh './agent-1/Mavenfile clean install'
+                 sh '/home/ubuntu/jenkins-s1/workspace/Maven-pipeline/agent-1/Mavenfile clean install'
                 build job: 'Maven-pipeline', wait: true
                 echo 'Maven-pipeline job triggered successfully!'
             }
