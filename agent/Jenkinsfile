@@ -19,6 +19,12 @@ pipeline {
             }
 
         }
+        stage('Trigger Mavenfile Job') {
+            steps {
+                build job: 'MyMavenFileJob', wait: true
+                echo 'Mavenfile job triggered successfully!'
+            }
+        }
     }   
 }
     
