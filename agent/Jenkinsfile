@@ -19,10 +19,10 @@ pipeline {
             }
 
         }
-        stage('Trigger Mavenfile Job') {
+        stage('Trigger agent-1/Mavenfile Job') {
             steps {
-                build job: 'MavenFile', wait: true
-                echo 'Mavenfile job triggered successfully!'
+                build job: 'agent-1/Mavenfile', wait: true
+                echo 'agent-1/Mavenfile job triggered successfully!'
             }
         }
     }   
