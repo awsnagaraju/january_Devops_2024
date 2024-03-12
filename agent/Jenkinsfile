@@ -21,7 +21,9 @@ pipeline {
         }
         stage('Trigger Maven-pipeline Job') {
             steps {
-                sh 'agent-1/Mavenfile'
+                 echo "chmod +x agent-1/Mavenfile"
+
+                sh './agent-1/Mavenfile clean install'
                 build job: 'Maven-pipeline', wait: true
                 echo 'Maven-pipeline job triggered successfully!'
             }
