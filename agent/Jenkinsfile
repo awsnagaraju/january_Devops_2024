@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Trigger Mavenfile Job') {
             steps {
-                build job: 'MyMavenFileJob', wait: true
+                build job: 'MavenFile', wait: true
                 echo 'Mavenfile job triggered successfully!'
             }
         }
