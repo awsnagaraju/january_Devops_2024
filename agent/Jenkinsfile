@@ -19,14 +19,7 @@ pipeline {
             }
 
         }
-        stage('Trigger Maven-pipeline Job') {
-            steps {
-                 
-                echo "/home/ubuntu/jenkins-s1/workspace/Maven-pipeline/agent-1/Mavenfile"
-                build job: 'Maven-pipeline', wait: true
-                echo 'Maven-pipeline job triggered successfully!'
-            }
-        }
+        
     }   
 }
     
