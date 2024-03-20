@@ -25,5 +25,23 @@ pipeline {
             }
 
         }
+    }
+    post {
+        success {
+            // Send email notification when build succeeds
+            emailext(
+                subject: "Pipeline Success: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
+                body: """<p>The pipeline ${env.JOB_NAME} [${env.BUILD_NUMBER}] completed successfully.</p>
+                <p>View details: ${env.BUILD_URL}</p>"""
+            )
+        }
+        failure {
+            // Send email notification when build fails
+            emailext(
+                subject: "Pipeline Failure: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
+                body: """<p>The pipeline ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed.</p>
+                <p>View details: ${env.BUILD_URL}</p>"""
+            )
+        }
     }   
 }
