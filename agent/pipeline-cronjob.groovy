@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    triggers {
+        cron('*/5 * * * 1-5') // Run every 5 minutes, Monday to Friday
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'pwd'
+                sh 'sleep 5'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh '''
+                    #!/bin/bash
+                    ls -lrt
+                    sleep 10
+                 '''   
+
+            }
+
+        }
+        
+    }   
+}
+    
