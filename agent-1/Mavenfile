@@ -28,6 +28,7 @@ pipeline {
     }
     post {
     success {
+        
         // Send email notification when build succeeds
         emailext(
             subject: "Pipeline Success: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
