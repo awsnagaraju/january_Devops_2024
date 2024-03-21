@@ -41,8 +41,8 @@ pipeline {
         // Send email notification when build fails
         emailext(
             subject: "Pipeline Failure: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
-            body: """<p>The pipeline ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed.</p>
-            <p>View details: ${env.BUILD_URL}</p>""",
+            body: """The pipeline ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed.
+            View details: ${env.BUILD_URL}""",
             to: 'nagaraju.aws456@gmail.com' // Add your recipient email IDs here
         )
     }
