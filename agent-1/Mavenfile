@@ -6,7 +6,7 @@ pipeline {
             agent {
                     label 'slave1'  //  using the slave1 machine/agent/node/slave for build stage
                 }
-                steps 
+                steps { 
                 
                     sh 'pwd'
 
@@ -21,6 +21,8 @@ pipeline {
                 sh '''
                     #!/bin/bash
                     ls -lrt
+                    ls-al
+                    tree
                     sleep 10
                  '''   
 
