@@ -34,7 +34,7 @@ pipeline {
             subject: "Pipeline Success: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
             body: """The pipeline ${env.JOB_NAME} [${env.BUILD_NUMBER}] completed successfully.
             View details: ${env.BUILD_URL}""",
-            to: "${env.EMAIL_RECIPIENTS},\$DEFAULT_RECIPIENTS" // Add your recipient email IDs here
+            to: '${env.EMAIL_RECIPIENTS},\$DEFAULT_RECIPIENTS' // Add your recipient email IDs here
         )
     }
     failure {
