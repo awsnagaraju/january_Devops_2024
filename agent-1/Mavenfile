@@ -34,7 +34,7 @@ pipeline {
             subject: "Pipeline Success: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
             body: """The pipeline ${env.JOB_NAME} [${env.BUILD_NUMBER}] completed successfully.
             View details: ${env.BUILD_URL}""",
-            to: 'nagaraju.aws456@gmail.com' // Add your recipient email IDs here
+            recipientProviders: [[$class: 'DevelopersRecipientProvider']] // Add your recipient email IDs here
         )
     }
     failure {
