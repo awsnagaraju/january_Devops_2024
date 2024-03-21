@@ -6,11 +6,12 @@ pipeline {
             agent {
                     label 'slave1'  //  using the slave1 machine/agent/node/slave for build stage
                 }
-                steps {
+                steps 
                 
-                    sh 'pwd
-                    sh 'sleep 10'
-                    
+                    sh 'pwd'
+
+                    sh 'sleep 5'
+
                     
             }
         }
