@@ -21,7 +21,6 @@ pipeline {
                 sh '''
                     #!/bin/bash
                     ls -lrt
-                    ls-al
                     tree
                     sleep 10
                  '''   
