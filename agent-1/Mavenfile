@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build')  {
             agent {
-                    label 'slave1'  //  using the slave1 machine/agent/node/slave for build stage
+                    label 'slave3'  //  using the slave1 machine/agent/node/slave for build stage
                 }
                 steps { 
                 
@@ -53,3 +53,4 @@ pipeline {
 }
 
 }
+
