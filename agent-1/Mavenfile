@@ -21,7 +21,7 @@ pipeline {
                 sh '''
                     #!/bin/bash
                     ls -lrt
-                    tree
+                    pwd
                     sleep 10
                  '''   
 
